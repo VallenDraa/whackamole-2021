@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <!-- Header -->
+    <header class="shadow-xl">
+        <h1 class="flex justify-center align-center uppercase font-extrabold text-5xl">Whack-A-Mole</h1>
+    </header>
+    <!-- menu -->
+    <section class="max-screenwidth">
+        <div class="menu rounded-3xl mx-auto
+        mt-12 relative shadow-2xl hidden">
+            <div class="absolute top-1/2 left-1/2
+            transform -translate-x-1/2 -translate-y-1/2
+            text-center text-5xl font-bold ">
+                <h2 class="py-5 px-16 bg-white rounded-3xl">Play</h2>
+                <h2 class="py-5 bg-white my-5
+                rounded-3xl">Scores</h2>
+                <h2 class="py-5 bg-white
+                rounded-3xl">Options</h2>
+            </div>
+        </div>  
+    </section>
+    <!-- game section -->
+    <section class="max-screenwidth">
+        <div class="menu menu rounded-3xl mx-auto
+        mt-12 relative shadow-2xl grid grid-cols-3 justify-items-center items-center gap-4 p-6">
+         <div class="hitbox"></div>
+         <div class="hitbox"></div>
+         <div class="hitbox"></div>
+         <div class="hitbox"></div>
+         <div class="hitbox"></div>
+         <div class="hitbox"></div>
+         <div class="hitbox"></div>
+         <div class="hitbox"></div>
+         <div class="hitbox"></div>
+        </div>
+    </section>
+</body>
+</html>
