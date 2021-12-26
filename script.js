@@ -99,6 +99,9 @@ gameWindow.addEventListener("click",function(e){
             life = 3;
             scoreValue =0;
             scoreGame.innerHTML = `SCORE: 0`  
+            for (let i = 0; i <heart.length; i++) {
+                heart[i].classList.replace("far","fas")
+            }
             backToMenu()
         }
     }
