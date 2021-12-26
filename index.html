@@ -15,24 +15,24 @@
 <body>
     <!-- Header -->
     <header class="shadow-xl">
-        <h1 class="flex justify-center align-center uppercase font-extrabold text-5xl">Whack-A-Mole</h1>
+        <h1 class="flex justify-center align-center uppercase font-extrabold text-3xl lg:text-5xl">Whack-A-Mole</h1>
     </header>
+
     <!-- menu -->
-    <section class="max-screenwidth">
+    <section class="max-screenwidth main-window">
         <div class="menu rounded-3xl mx-auto
         mt-12 relative shadow-2xl">
-            <div class="absolute top-1/2 left-1/2
-            transform -translate-x-1/2 -translate-y-1/2
-            text-center text-5xl font-bold">
-                <h2 class="py-5 px-16 bg-white rounded-3xl shadow-2xl cursor-pointer play">Play</h2>
-                <h2 class="py-5 bg-white my-5 rounded-3xl shadow-2xl cursor-pointer score-menu">Scores</h2>
-                <h2 class="py-5 bg-white rounded-3xl shadow-2xl cursor-pointer option">Options</h2>
+            <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center text-5xl font-bold">
+                <h2 class="py-5 px-16 rounded-3xl shadow-2xl cursor-pointer menu-btn play mb-5">Play</h2>
+                <!-- <h2 class="py-5 my-5 rounded-3xl shadow-2xl cursor-pointer menu-btn score-menu">Scores</h2> -->
+                <h2 class="py-5 rounded-3xl shadow-2xl cursor-pointer menu-btn options">Options</h2>
             </div>
         </div>  
     </section>
+
     <!-- game section -->
     <section class="max-screenwidth game-window hidden">
-        <div class="flex justify-evenly mt-11 text-4xl">
+        <div class="flex justify-evenly mt-5 lg:mt-11 text-sm md:text-xl lg:text-4xl order-2 lg:order-1 score-panel">
             <div class="border-2 border-black px-5 py-1 rounded-2xl shadow-xl text-center">
               <h2 class="score-game">SCORE: 0</h2>  
               <!-- <i class="far fa-heart"></i> -->
@@ -42,17 +42,35 @@
             </div>
             <h2 class="border-2 border-black px-5 py-1 rounded-2xl cursor-pointer shadow-xl menu-back flex items-center font-bold">Back To Menu</h2>
         </div>
-        <div class="menu rounded-3xl mx-auto mt-6 relative shadow-2xl grid grid-cols-3 justify-items-center items-center gap-4 p-6 my-6">
-            <div class="hitbox">0</div>
-            <div class="hitbox">1</div>
-            <div class="hitbox">2</div>
-            <div class="hitbox">3</div>
-            <div class="hitbox">4</div>
-            <div class="hitbox">5</div>
-            <div class="hitbox">6</div>
-            <div class="hitbox">7</div>
-            <div class="hitbox">8</div>
+        <div class="menu rounded-3xl mx-auto mt-6 relative shadow-2xl grid grid-cols-3 justify-items-center items-center gap-4 p-6 my-6 w-full md:w-4/5 order-1 lg:order-2">
+            <div class="hitbox"></div>
+            <div class="hitbox"></div>
+            <div class="hitbox"></div>
+            <div class="hitbox"></div>
+            <div class="hitbox"></div>
+            <div class="hitbox"></div>
+            <div class="hitbox"></div>
+            <div class="hitbox"></div>
+            <div class="hitbox"></div>
         </div>
+    </section>
+
+    <!-- option -->
+    <section class="max-screenwidth option-window hidden">
+        <h2 class=" font-bold text-2xl border-2 border-black px-5 py-1 rounded-2xl shadow-xl text-center mt-6 w-full lg:w-4/5 mx-auto duration-500 ">Options Menu</h2>  
+        <div class="menu rounded-3xl mx-auto mt-6 relative shadow-2xl py-10 px-5 lg:px-32"> 
+            <!-- volume -->
+            <div class="grid grid-cols-2 gap-y-20 content-center h-full option rounded-2xl">
+                <p class="text-center text-2xl font-bold">Volume</p>
+                <input type="range" class="w-4/5 lg:w-1/2 mx-auto">
+                <!-- Turn Picture Shaking -->
+                <p class="text-center text-2xl font-bold"> Box<br>Shaking</p>
+                <input type="checkbox" class="w-8 lg:w-12 mx-auto">
+                <p class="text-center text-2xl font-bold"> Picture<br>Zoom-Out</p>
+                <input type="checkbox" class="w-8 lg:w-12 mx-auto">
+            </div>
+        </div>
+        <h2 class="opt-back border-2 border-black px-5 py-1 rounded-2xl cursor-pointer shadow-xl font-bold text-center w-4/5 lg:w-1/2 mx-auto mt-6">Back To Menu</h2>
     </section>
     <script src="script.js" ></script>
 </body>

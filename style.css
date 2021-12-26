@@ -21,13 +21,27 @@ h1{
 }
 
 .menu{
-    width: 80%;
     height: 600px;
     background-color: rgb(180 83 9);
 }
 
+.menu-btn{
+    background-color: rgb(255 251 235);
+    transition: 0.5s;
+}
+.menu-btn:hover{
+    background-color:rgba(255, 251, 235, 0.55);
+}
+
 
 /* The Gamescreen UI */
+.menu-back{
+    background-color: rgb(255, 249, 235);
+    transition: 0.5s;
+}
+.menu-back:hover{
+    background-color:rgb(198, 164, 126);
+}
 .hitbox{
     width: 100%;
     height: 100%;
@@ -38,7 +52,7 @@ h1{
     box-shadow: 1px 1px 6px 0 black;
     border-radius:20px;
 }
-.hitbox:hover{
+.game-window:hover{
     cursor: url(./img/gavel.png),auto;
 }
 
@@ -47,8 +61,34 @@ h1{
     to { background-size:40%}
 }
 
+@keyframes hitbox-click-animation {
+    0% {
+        background-color: rgb(255 251 235);
+        transform: rotate(5deg)
+    }
+    50%{
+        transform: rotate(-5deg)
+    }
+    100%{ 
+        background-color: rgba(255, 251, 235, 0.55);
+        transform: rotate(0deg)
+    }
+}
 .fa-heart{
     color: red;
     font-size: 30px;
     transition: all 0.3s;
+}
+
+@media (min-width: 1024px) {
+    .hitbox{
+        background-size:80%;
+    }
+}
+
+/* Option UI */
+
+.option{
+    background-color: rgb(255 251 235);
+    transition: 0.5s;
 }
