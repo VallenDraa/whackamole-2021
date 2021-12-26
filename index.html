@@ -8,6 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
     <link rel="stylesheet" href="style.css">
     <title>Document</title>
 </head>
@@ -19,32 +20,40 @@
     <!-- menu -->
     <section class="max-screenwidth">
         <div class="menu rounded-3xl mx-auto
-        mt-12 relative shadow-2xl hidden">
+        mt-12 relative shadow-2xl">
             <div class="absolute top-1/2 left-1/2
             transform -translate-x-1/2 -translate-y-1/2
-            text-center text-5xl font-bold ">
-                <h2 class="py-5 px-16 bg-white rounded-3xl">Play</h2>
-                <h2 class="py-5 bg-white my-5
-                rounded-3xl">Scores</h2>
-                <h2 class="py-5 bg-white
-                rounded-3xl">Options</h2>
+            text-center text-5xl font-bold">
+                <h2 class="py-5 px-16 bg-white rounded-3xl shadow-2xl cursor-pointer play">Play</h2>
+                <h2 class="py-5 bg-white my-5 rounded-3xl shadow-2xl cursor-pointer score-menu">Scores</h2>
+                <h2 class="py-5 bg-white rounded-3xl shadow-2xl cursor-pointer option">Options</h2>
             </div>
         </div>  
     </section>
     <!-- game section -->
-    <section class="max-screenwidth">
-        <div class="menu menu rounded-3xl mx-auto
-        mt-12 relative shadow-2xl grid grid-cols-3 justify-items-center items-center gap-4 p-6">
-         <div class="hitbox"></div>
-         <div class="hitbox"></div>
-         <div class="hitbox"></div>
-         <div class="hitbox"></div>
-         <div class="hitbox"></div>
-         <div class="hitbox"></div>
-         <div class="hitbox"></div>
-         <div class="hitbox"></div>
-         <div class="hitbox"></div>
+    <section class="max-screenwidth game-window hidden">
+        <div class="flex justify-evenly mt-11 text-4xl">
+            <div class="border-2 border-black px-5 py-1 rounded-2xl shadow-xl text-center">
+              <h2 class="score-game">SCORE: 0</h2>  
+              <!-- <i class="far fa-heart"></i> -->
+              <i class="fas fa-heart"></i>
+              <i class="fas fa-heart"></i>
+              <i class="fas fa-heart"></i>
+            </div>
+            <h2 class="border-2 border-black px-5 py-1 rounded-2xl cursor-pointer shadow-xl menu-back flex items-center font-bold">Back To Menu</h2>
+        </div>
+        <div class="menu rounded-3xl mx-auto mt-6 relative shadow-2xl grid grid-cols-3 justify-items-center items-center gap-4 p-6 my-6">
+            <div class="hitbox">0</div>
+            <div class="hitbox">1</div>
+            <div class="hitbox">2</div>
+            <div class="hitbox">3</div>
+            <div class="hitbox">4</div>
+            <div class="hitbox">5</div>
+            <div class="hitbox">6</div>
+            <div class="hitbox">7</div>
+            <div class="hitbox">8</div>
         </div>
     </section>
+    <script src="script.js" ></script>
 </body>
 </html>

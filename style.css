@@ -2,12 +2,13 @@
     --comic-neue: 'Comic Neue', cursive;
     font-family: 'Comic Neue', cursive;
 }
-
+/* utility classes */
 .max-screenwidth{
     width: 90%;
     margin: 0 auto;
 }
 
+/* Menu Ui's */
 body{
    background-color: rgb(255 251 235);
 }
@@ -20,19 +21,34 @@ h1{
 }
 
 .menu{
-    width: 100%;
-    height: 800px;
+    width: 80%;
+    height: 600px;
     background-color: rgb(180 83 9);
 }
 
+
+/* The Gamescreen UI */
 .hitbox{
     width: 100%;
     height: 100%;
-    background-image: url(./svg/flower.svg);
     background-color: rgb(255 251 235);
-    background-size:50%;
+    background-size:40%;
     background-position: center;
     background-repeat: no-repeat;
     box-shadow: 1px 1px 6px 0 black;
-    border-radius:20px
+    border-radius:20px;
+}
+.hitbox:hover{
+    cursor: url(./img/gavel.png),auto;
+}
+
+@keyframes resize-pic {
+    from { background-size: 50%; }
+    to { background-size:40%}
+}
+
+.fa-heart{
+    color: red;
+    font-size: 30px;
+    transition: all 0.3s;
 }
