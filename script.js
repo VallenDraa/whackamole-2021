@@ -44,13 +44,15 @@ function backToMenu(){
 let refreshSpeed = 1200;
 var stopRepeat = 0;
 let gameTime = 0;
+let bonus = false;
+const levelUp = new Audio("./mp3/levelUp.mp3")
 const hitbox = document.querySelectorAll(".hitbox");
 const scoreGame = document.querySelector(".score-game");
 const heart  = document.querySelectorAll(".fas")
 function hitboxImg(){
     if(inGame){
         // generate random placement algorithm
-        let boxIndicator = 0;
+        let boxIndicator;
         while(boxIndicator == stopRepeat){
             boxIndicator = Math.floor(Math.random() * 9); 
         }
@@ -60,7 +62,7 @@ function hitboxImg(){
             hitbox[i].style.animation="none"
             if(i == boxIndicator){
                 hitbox[i].style.backgroundImage = "url('./svg/mole.svg')";
-                hitbox[i].style.backgroundSize= "40%";
+                hitbox[i].style.backgroundSize= "60%";
                 hitbox[i].classList.remove("flower")
                 hitbox[i].classList.add("mole")
             }
@@ -81,12 +83,14 @@ let refreshImage = setInterval(hitboxImg,refreshSpeed );
 setInterval(function(){
     if(inGame){ 
         gameTime++;
-        if(gameTime % 15 == 0){
+        if(gameTime % 10 == 0){
             if(refreshSpeed !=600){
                 refreshSpeed-= 100;
             }
             if(refreshSpeed >= 600){
                 clearInterval(refreshImage);
+                levelUp.play();
+                levelUp.volume = 0.2;
                 refreshImage = setInterval(hitboxImg,refreshSpeed);   
             }
         } 
