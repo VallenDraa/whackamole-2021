@@ -31,16 +31,19 @@
     </section>
 
     <!-- game section -->
-    <section class="max-screenwidth game-window hidden">
-        <div class="flex justify-evenly mt-5 lg:mt-11 text-sm md:text-xl lg:text-4xl order-2 lg:order-1 score-panel">
-            <div class="border-2 border-black px-5 py-1 rounded-2xl shadow-xl text-center">
-              <h2 class="score-game">SCORE: 0</h2>  
-              <!-- <i class="far fa-heart"></i> -->
-              <i class="fas fa-heart"></i>
-              <i class="fas fa-heart"></i>
-              <i class="fas fa-heart"></i>
+    <section class="max-screenwidth game-window hidden relative">
+        <div class="w-4/5 text-center flex-col lg:flex-row flex justify-around items-center mx-auto mt-5 lg:mt-11 text-sm md:text-xl lg:text-2xl order-2 lg:order-1 score-panel">
+            <div class="border-2 border-black w-full lg:w-1/3 py-1 rounded-2xl shadow-xl flex justify-evenly">
+                <p class="score-game">SCORE<br>0</p>  
+                <!-- <i class="far fa-heart"></i> -->
+                <div class="flex flex-row lg:flex-col items-center ">
+                    <i class="fas fa-heart"></i>
+                    <i class="fas fa-heart"></i>
+                    <i class="fas fa-heart"></i>   
+                </div>
+                <p class="level-game" >LEVEL<br>0</p> 
             </div>
-            <h2 class="border-2 border-black px-5 py-1 rounded-2xl cursor-pointer shadow-xl menu-back flex items-center font-bold">Back To Menu</h2>
+            <h2 class="border-2 border-black py-2 lg:py-5 mt-5 lg:m-0 w-full lg:w-1/3 rounded-2xl cursor-pointer shadow-xl menu-back flex items-center font-bold justify-center">Back To Menu</h2>
         </div>
         <div class="menu rounded-3xl mx-auto mt-6 relative shadow-2xl grid grid-cols-3 justify-items-center items-center gap-4 p-6 my-6 w-full md:w-4/5 order-1 lg:order-2">
             <div class="hitbox"></div>
@@ -52,6 +55,12 @@
             <div class="hitbox"></div>
             <div class="hitbox"></div>
             <div class="hitbox"></div>
+            <!-- level up pop-up -->
+        <div class="level-popup h-10 w-80 bg-green-600 absolute bottom-0 hidden flex justify-around items-center">
+            <i class="fas fa-arrow-up"></i>
+            <p class="lvl-up-text grid place-content-center text-3xl font-extrabold uppercase">Level Up !</p>
+            <i class="fas fa-arrow-up"></i>
+        </div>
         </div>
     </section>
 
@@ -62,12 +71,12 @@
             <!-- volume -->
             <div class="grid grid-cols-2 gap-y-20 content-center h-full option rounded-2xl">
                 <p class="text-center text-2xl font-bold">Volume</p>
-                <input type="range" class="w-4/5 lg:w-1/2 mx-auto">
+                <input type="range" min="0" max="20"class="w-4/5 lg:w-1/2 mx-auto volume-opt">
                 <!-- Turn Picture Shaking -->
-                <p class="text-center text-2xl font-bold"> Box<br>Shaking</p>
-                <input type="checkbox" class="w-8 lg:w-12 mx-auto">
+                <p class="text-center text-2xl font-bold"> Picture<br>Shaking</p>
+                <input type="checkbox" class="w-8 lg:w-12 mx-auto shaking-opt">
                 <p class="text-center text-2xl font-bold"> Picture<br>Zoom-Out</p>
-                <input type="checkbox" class="w-8 lg:w-12 mx-auto">
+                <input type="checkbox" class="w-8 lg:w-12 mx-auto zoom-opt">
             </div>
         </div>
         <h2 class="opt-back border-2 border-black px-5 py-1 rounded-2xl cursor-pointer shadow-xl font-bold text-center w-4/5 lg:w-1/2 mx-auto mt-6">Back To Menu</h2>
