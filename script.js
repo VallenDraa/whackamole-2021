@@ -1,5 +1,20 @@
-
-
+// wtf
+const headerText = document.querySelector(".header-text")
+const generateHeader = (function(){
+    let x = Math.round(Math.random * 1000);
+    if(x == 777){
+        headerText.textContent = "GUAC-A-MOLE"
+    }
+    else if(x == 666){
+        headerText.textContent = "TAM-A-LE"
+    }
+    else if(x == 555){
+        headerText.textContent = "IKAN-LELE"
+    }
+    else{
+        headerText.textContent = "WHACK-A-MOLE"
+    }
+}())
 
 
 
